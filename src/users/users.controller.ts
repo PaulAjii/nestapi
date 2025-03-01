@@ -1,9 +1,9 @@
-import { Body, Controller, Delete, Get, Param, Patch, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Patch, Post, Query } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
     @Get()
-    findAll() {
+    findAll(@Query('role') role?: "INTERN" | "ENGINEER" | "ADMIN") {
         return []
     }
 
